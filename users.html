@@ -1,0 +1,62 @@
+
+
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <style>
+
+    .user {
+      margin: 40px;
+      width: 50%;
+      padding: 20px;
+      border: 1px solid #999;
+    }
+
+    .user.selected {
+      border-color: red;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="container">
+
+    <div class="user">
+      <img class="photo" src="http://placehold.it/50x50" />
+      <span class="name">Bob</span>
+      <span class="phone">555-555-5555</span>
+    </div>
+
+    <div class="user">
+      <img class="photo" src="http://placehold.it/50x50" />
+      <span class="name">Doug</span>
+      <span class="phone">777-777-7777</span>
+    </div>
+  </div>
+  <script>
+
+
+
+
+      $( document ).ready(function() {
+
+      //  setTimeout(function(){
+          var users = $('.user');
+
+          users.each(function(index, el){
+            var name = $(this).find('.name').text();
+            console.log(name);
+          });
+
+
+        //}, 1000 * 10);
+
+
+
+      });
+
+  </script>
+</body>
+
+
+</html>
