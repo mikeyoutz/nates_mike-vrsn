@@ -1,0 +1,54 @@
+<html>
+  <head>
+
+  <style>
+
+    #box {
+      width: 200px;
+      height: 200px;
+      border: 1px solid #999;
+      background-color: red;
+    }
+
+
+
+  </style>
+
+  </head>
+  <body>
+
+    <div id="box"></div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="color.js"></script>
+    <script>
+      $(function(){
+
+        var box = $('#box');
+
+        box.on('mouseenter', function(){
+          box
+            .stop(true)
+          .animate({
+            backgroundColor: 'green'
+          , width: 500
+          , height: 500
+          }, 1500);
+        });
+
+        box.on('mouseleave', function(){
+          box
+          .stop(true)
+            .animate({
+            backgroundColor: 'red'
+          , width: 200
+          , height: 200
+          }, 1500);
+        });
+
+
+
+      });
+    </script>
+  </body>
+</html>

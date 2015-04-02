@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+  <style>
+
+    body {
+      height: 4000px;
+    }
+
+
+    #dot {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-color: blue;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="dot"></div>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+  <script type="text/javascript">
+
+    $(function(){
+
+      var dot = $('#dot');
+
+      var stack = [];
+      var timeoutId;
+
+      $('body').on('mousemove', function(event){
+
+        //clearTimeout(timeoutId);
+        console.log(event.pageY, event.pageX);
+        dot.css({top: event.pageY + 15, left: event.pageX + 15});
+
+        // stack.push({
+        //   top: event.pageY,
+        //   left: event.pageX,
+        //   ts: Date.now()
+        // });
+
+        // timeoutId = setTimeout(playBack, 2000);
+        //
+        //
+        // function playBack(idx){
+        //   if(!idx){
+        //     console.log(stack.length);
+        //     dot.css(stack[0]);
+        //     playBack(1);
+        //   } else if(idx === stack.length) {
+        //     stack = [];
+        //   } else {
+        //     var point = stack[idx];
+        //     var delay = point.ts - stack[idx-1].ts;
+        //
+        //     setTimeout(function(){
+        //       dot.css(point);
+        //       playBack(idx + 1);
+        //     }, delay);
+        //   }
+        // }
+
+
+      });
+
+
+    });
+
+  </script>
+</body>
+</html>
